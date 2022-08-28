@@ -5,21 +5,21 @@
 class Adocsnip < Formula
   desc "manage vscode-style snippets in asciidoc"
   homepage "https://github.com/greatliontech/adocsnip"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.1/adocsnip_0.0.1_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "e8da90be7d16fe18b444549bc0a9ed9830694a525c5a3038c1276e3fe4830d37"
+    if Hardware::CPU.intel?
+      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.2/adocsnip_0.0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "344448c3721547680c7935da5d8707305e77a09739921c008ee9bddc09f18c93"
 
       def install
         bin.install "adocsnip"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.1/adocsnip_0.0.1_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a5315eea4f0f5c11f250852852816cc1e9fa937a88d80585e16ccfe9fec0bec8"
+    if Hardware::CPU.arm?
+      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.2/adocsnip_0.0.2_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0b3b73e40c1d8a72cd3a760d16cc82c2b3d1e562e0d413030693bcf988925fcc"
 
       def install
         bin.install "adocsnip"
@@ -28,17 +28,17 @@ class Adocsnip < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.1/adocsnip_0.0.1_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "20057eea1043e41c445067c620a39440cb553bf3db6ba73a4aae9bf88a666290"
+    if Hardware::CPU.intel?
+      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.2/adocsnip_0.0.2_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "bf1f97d1edc99d6d28acaad9dbc2f8585b6e32e1f090d0f61fe08e308b1af4e9"
 
       def install
         bin.install "adocsnip"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.1/adocsnip_0.0.1_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "0f839a855b86f060c95a6d55a8dcd7025aa3d8fcea97f40c9bf522cc542961b8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/greatliontech/adocsnip/releases/download/0.0.2/adocsnip_0.0.2_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "33a5c8bccfea850eb8073a5bfc8e993eadb3af9dbc6449e7cda1bc9f77a295f5"
 
       def install
         bin.install "adocsnip"
