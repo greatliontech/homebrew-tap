@@ -5,21 +5,21 @@
 class ProtocGenRtkQuery < Formula
   desc "Generate rtk query endpoints from grpc service definitions"
   homepage "https://github.com/greatliontech/protoc-gen-rtk-query"
-  version "0.4.2"
+  version "0.4.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.2/protoc-gen-rtk-query_0.4.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "17600b08a3d34caaf027d9541f0ffa483315f821511d577f3ced4bc2a72e9565"
+    if Hardware::CPU.arm?
+      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.3/protoc-gen-rtk-query_0.4.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "85ce24ccfcb8d4b3f5f4f9eb75d0c3c00c09b9d391f3f5a5206dd311b9219028"
 
       def install
         bin.install "protoc-gen-rtk-query"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.2/protoc-gen-rtk-query_0.4.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c9b1537ab63980bd8dda4976482e86927ab591dc571c8aca4002103f556a7725"
+    if Hardware::CPU.intel?
+      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.3/protoc-gen-rtk-query_0.4.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8f6b5f74cb80fde24edc498e8dffa17ecfb19322c81c745537f57b78858450d9"
 
       def install
         bin.install "protoc-gen-rtk-query"
@@ -29,16 +29,16 @@ class ProtocGenRtkQuery < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.2/protoc-gen-rtk-query_0.4.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "80b0b2c68450fcda9dce60ba1a21c1faac797e77f340181d976a818982047860"
+      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.3/protoc-gen-rtk-query_0.4.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1368c8f7a08be9ae98a0ffc4bde24b7d98c8c549cf57e8d30bf9e19bb52b6935"
 
       def install
         bin.install "protoc-gen-rtk-query"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.2/protoc-gen-rtk-query_0.4.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7159c80570793a7d6ff2ac7d4afd3b8c6c4e5c4ab7ec7d8c244224c822ba4b8e"
+      url "https://github.com/greatliontech/protoc-gen-rtk-query/releases/download/v0.4.3/protoc-gen-rtk-query_0.4.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7d908df85a56828b2ce0ca97d6823c94a358af775cf544abb2537005e2225164"
 
       def install
         bin.install "protoc-gen-rtk-query"
