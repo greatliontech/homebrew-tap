@@ -5,13 +5,13 @@
 class Semrel < Formula
   desc "Semantic Versioning and Conventional Commits release utility"
   homepage "https://github.com/greatliontech/semrel"
-  version "0.2.1"
+  version "0.2.2"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/greatliontech/semrel/releases/download/0.2.1/semrel_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "18e9dd63ef005ae33d69573e7375e67fd857488f587d0f68e5c379778c8f6139"
+      url "https://github.com/greatliontech/semrel/releases/download/0.2.2/semrel_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "28a548b2e135383fac419e930a505aa7a2d3981d26863c3aae30e3463301f16a"
 
       def install
         bin.install "semrel"
@@ -21,8 +21,8 @@ class Semrel < Formula
       end
     end
     on_arm do
-      url "https://github.com/greatliontech/semrel/releases/download/0.2.1/semrel_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "62c8007f69e1a01817c318a60cbeadc357766b57c71a19ebaf999c1a6271f5a9"
+      url "https://github.com/greatliontech/semrel/releases/download/0.2.2/semrel_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8b876b456a7b60e42ef2ed5531029a22a72172ae7e22e6ace3090025a5e359f9"
 
       def install
         bin.install "semrel"
@@ -36,8 +36,8 @@ class Semrel < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/greatliontech/semrel/releases/download/0.2.1/semrel_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-        sha256 "67044377c1945b22f74c0718ad40c1e57733c736ebddd3ce47b01d38e7fb3359"
+        url "https://github.com/greatliontech/semrel/releases/download/0.2.2/semrel_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+        sha256 "035cc1cfdd9edaa6e0ac97aa9b7d504002cd2526452ca1c63fcca70923d4c77f"
 
         def install
           bin.install "semrel"
@@ -49,8 +49,8 @@ class Semrel < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/greatliontech/semrel/releases/download/0.2.1/semrel_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "154af0ade7451837568827f4806696c27dd69260140bf55c910b7ed5dfbd029d"
+        url "https://github.com/greatliontech/semrel/releases/download/0.2.2/semrel_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "41917d1ded9ef8581a0205f3329bfa7487ee133cbe9d3684e0813ad18324af11"
 
         def install
           bin.install "semrel"
